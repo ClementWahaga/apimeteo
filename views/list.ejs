@@ -11,37 +11,37 @@
 
 <body>
 
-    <% data.forEach(function(data) { %>
 
-        <div class="container mt-5">
-            <p class="display-4 text-center">MeteoAPI</p>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">meteo a
-                        <%= data.name %>,
-                            <%= data.sys.country %>
-                    </h5>
-                    <p class="text-muted">Lat:
-                        <%= data.coord.lat %>, Lon:
-                            <%= data.coord.lon %>
-                    </p>
-                    <img class="float-right" src="http://openweathermap.org/img/wn/<%= data.weather[0].icon %>@2x.png" alt="icon">
-                    <p class="display-1">
-                        <%= data.main.temp%><sup>o</sup>C</p>
-                    <span class="text-muted">Feels like <%= data.main.feels_like %><sup>o</sup>C</span>
-                    <h5 class="text-capitalize font-weight-bold">
-                        <%= data.weather[0].description %>
-                    </h5>
-                    <div class="overflow-x">
-                        <span class="pr-5 inf"><i class="fas fa-wind"></i> Vent <%= data.wind.speed %> m/sec</span>
-                        <span class="pr-5 inf"><i class="fas fa-paper-plane"></i> Presion Atmospherique <%= data.main.pressure %> mb</span>
-                        <span class="pr-5 inf"><i class="fas fa-tint"></i> Humidité dans l'air <%= data.main.humidity %>%</span>
-                        <span class="pr-5 inf"><i class="fas fa-eye"></i> Visibilité <%= data.visibility/1000 %> km</span>
-                        <span class="pr-5 inf"><i class="fas fa-cloud"></i> Ensoleilement <%= data.clouds.all %>%</span>
-                    </div>
+    <div class="container mt-5">
+        <p class="display-4 text-center">MeteoAPI</p>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">meteo a
+                    <%= data.name %>,
+                        <%= data.sys.country %>
+                </h5>
+                <p class="text-muted">Lat:
+                    <%= data.coord.lat %>, Lon:
+                        <%= data.coord.lon %>
+                </p>
+                <img class="float-right" src="http://openweathermap.org/img/wn/<%= data.weather[0].icon %>@2x.png" alt="icon">
+                <p class="display-1">
+                    <%= data.main.temp%><sup>o</sup>C</p>
+                <span class="text-muted">Feels like <%= data.main.feels_like %><sup>o</sup>C</span>
+                <h5 class="text-capitalize font-weight-bold">
+                    <%= data.weather[0].description %>
+                </h5>
+                <div class="overflow-x">
+                    <span class="pr-5 inf"><i class="fas fa-wind"></i> Vent <%= data.wind.speed %> m/sec</span>
+                    <span class="pr-5 inf"><i class="fas fa-paper-plane"></i> Presion Atmospherique <%= data.main.pressure %> mb</span>
+                    <span class="pr-5 inf"><i class="fas fa-tint"></i> Humidité dans l'air <%= data.main.humidity %>%</span>
+                    <span class="pr-5 inf"><i class="fas fa-eye"></i> Visibilité <%= data.visibility/1000 %> km</span>
+                    <span class="pr-5 inf"><i class="fas fa-cloud"></i> Ensoleilement <%= data.clouds.all %>%</span>
                 </div>
             </div>
-            <% }); %>
+        </div>
+    </div>
+
 
 
 </body>

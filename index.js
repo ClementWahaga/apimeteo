@@ -5,7 +5,7 @@ const fetch = require('node-fetch');
 const {
     json,
     text
-} = require('body-parser');
+} = require('express');
 const app = express()
 
 
@@ -34,10 +34,12 @@ app.get('/Noumea', (req, res) => {
         .then(res => res.json())
         .then(json => {
             console.log(json)
-            res.status(200).text(json)
+            const data = res.status(200).json(json)
+            const weatherData = text(data)
             res.render('list', {
                 data: weatherData
             })
+            console.log(weatherData);
         })
 
 
